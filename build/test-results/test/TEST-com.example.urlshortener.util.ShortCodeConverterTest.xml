@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.urlshortener.util.ShortCodeConverterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-07-25T12:01:54" hostname="DESKTOP-TKM6DDQ" time="0.003">
+  <properties/>
+  <testcase name="shouldRejectLeadingZero()" classname="com.example.urlshortener.util.ShortCodeConverterTest" time="0.001"/>
+  <testcase name="shouldRejectZeroId()" classname="com.example.urlshortener.util.ShortCodeConverterTest" time="0.001"/>
+  <testcase name="shouldConvertCanonicalBase62Value()" classname="com.example.urlshortener.util.ShortCodeConverterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

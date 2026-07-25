@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.urlshortener.util.Base62CodecTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-07-25T12:01:53" hostname="DESKTOP-TKM6DDQ" time="0.054">
+  <properties/>
+  <testcase name="[1] id=0" classname="com.example.urlshortener.util.Base62CodecTest" time="0.0"/>
+  <testcase name="[2] id=1" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[3] id=61" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[4] id=62" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[5] id=63" classname="com.example.urlshortener.util.Base62CodecTest" time="0.0"/>
+  <testcase name="[6] id=9223372036854775807" classname="com.example.urlshortener.util.Base62CodecTest" time="0.0"/>
+  <testcase name="shouldRejectNullValue()" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="shouldRejectNegativeId()" classname="com.example.urlshortener.util.Base62CodecTest" time="0.002"/>
+  <testcase name="shouldRejectValueLongerThanElevenCharacters()" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="shouldRejectValueGreaterThanLongMaxValue()" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[1] value=!" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[2] value=abc-" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[3] value=가" classname="com.example.urlshortener.util.Base62CodecTest" time="0.0"/>
+  <testcase name="[1] id=0, expected=0" classname="com.example.urlshortener.util.Base62CodecTest" time="0.008"/>
+  <testcase name="[2] id=1, expected=1" classname="com.example.urlshortener.util.Base62CodecTest" time="0.0"/>
+  <testcase name="[3] id=61, expected=z" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[4] id=62, expected=10" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="[5] id=63, expected=11" classname="com.example.urlshortener.util.Base62CodecTest" time="0.001"/>
+  <testcase name="shouldRejectEmptyValue()" classname="com.example.urlshortener.util.Base62CodecTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

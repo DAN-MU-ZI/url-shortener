@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.urlshortener.controller.UrlShortenerControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-07-25T12:01:49" hostname="DESKTOP-TKM6DDQ" time="3.579">
+  <properties/>
+  <testcase name="shouldRedirectPermanentlyWhenConfiguredFor301()" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="3.044"/>
+  <testcase name="[1] longUrl=" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.308"/>
+  <testcase name="[2] longUrl=not-a-url" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.026"/>
+  <testcase name="shouldReturnNotFoundWhenShortUrlDoesNotExist()" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.024"/>
+  <testcase name="shouldReturnServiceUnavailableWhenDatastoreFails()" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.02"/>
+  <testcase name="[1] shortCode=invalid!" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.032"/>
+  <testcase name="[2] shortCode=01" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.018"/>
+  <testcase name="[3] shortCode=AzL8n0Y58m8" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.02"/>
+  <testcase name="shouldReturnApiErrorWhenRequestBodyIsMalformed()" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.015"/>
+  <testcase name="shouldRedirectWithFoundAndLocationHeader()" classname="com.example.urlshortener.controller.UrlShortenerControllerTest" time="0.014"/>
+  <system-out><![CDATA[Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+21:01:51.480 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.3.Final
+21:01:52.593 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:52.594 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:52.601 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 4 ms
+21:01:52.884 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:52.884 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:52.884 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+21:01:53.183 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.183 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.183 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+21:01:53.214 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.214 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.214 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+21:01:53.247 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.247 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.248 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+21:01:53.272 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.272 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.272 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+21:01:53.306 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+21:01:53.327 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.327 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.328 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+21:01:53.343 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.343 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.343 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+21:01:53.359 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+21:01:53.359 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+21:01:53.360 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

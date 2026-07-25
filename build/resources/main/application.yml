@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: url-shortener
+  data:
+    mongodb:
+      uri: mongodb://mongo:27017/shortener_db
+    redis:
+      host: redis
+      port: 6379
+server:
+  port: 8080
+
+app:
+  snowflake:
+    worker-id: ${APP_SNOWFLAKE_WORKER_ID:0}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, prometheus
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}

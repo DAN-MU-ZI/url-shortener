@@ -1,0 +1,69 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8080"
+    environment:
+      - SPRING_DATA_MONGODB_URI=${SPRING_DATA_MONGODB_URI:-mongodb://db:27017/shortener_db}
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+      - REDIRECT_MODE=${REDIRECT_MODE:-302}
+      - APP_SNOWFLAKE_WORKER_ID=${APP_SNOWFLAKE_WORKER_ID:-0}
+    depends_on:
+      db:
+        condition: service_started
+      redis:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  db:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    command: mongod --quiet --logpath /dev/null
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data_java:/data
+    command: redis-server --save "" --appendonly no --maxmemory 512mb --maxmemory-policy allkeys-lru
+
+  k6:
+    image: grafana/k6
+    volumes:
+      - ../scripts:/scripts
+    environment:
+      - BASE_URL=http://app:8080
+    command: run /scripts/load_test.js
+
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana:10.0.3
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - prometheus
+
+volumes:
+  mongo_data:
+  redis_data_java:
