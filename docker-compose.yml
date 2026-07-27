@@ -9,11 +9,6 @@ services:
       - SPRING_DATA_REDIS_PORT=${SPRING_DATA_REDIS_PORT:-6379}
       - REDIRECT_MODE=${REDIRECT_MODE:-302}
       - APP_SNOWFLAKE_WORKER_ID=${APP_SNOWFLAKE_WORKER_ID:-0}
-    depends_on:
-      db:
-        condition: service_started
-      redis:
-        condition: service_started
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 5s
