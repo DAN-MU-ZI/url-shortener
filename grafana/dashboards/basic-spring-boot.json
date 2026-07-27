@@ -78,13 +78,53 @@
       ]
     },
     {
-      "title": "JVM Heap Memory Used",
+      "title": "Short URL Creation RPS",
       "type": "timeseries",
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
         "y": 8
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Prometheus"
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(http_server_requests_seconds_count{server=~\"$server\", method=\"POST\", uri=\"/api/v1/data/shorten\"}[1m]))",
+          "legendFormat": "Create"
+        }
+      ]
+    },
+    {
+      "title": "Short URL Redirect RPS",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Prometheus"
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(http_server_requests_seconds_count{server=~\"$server\", method=\"GET\", uri=\"/api/v1/{shortUrl}\"}[1m]))",
+          "legendFormat": "Redirect"
+        }
+      ]
+    },
+    {
+      "title": "JVM Heap Memory Used",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
       },
       "datasource": {
         "type": "prometheus",
@@ -104,7 +144,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 16
+        "y": 24
       },
       "datasource": {
         "type": "prometheus",
@@ -124,7 +164,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 16
+        "y": 24
       },
       "datasource": {
         "type": "prometheus",
@@ -144,7 +184,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 25
+        "y": 33
       },
       "datasource": {
         "type": "prometheus",
@@ -168,7 +208,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 25
+        "y": 33
       },
       "datasource": {
         "type": "prometheus",
@@ -192,7 +232,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 34
+        "y": 42
       },
       "datasource": {
         "type": "prometheus",
